@@ -57,7 +57,7 @@ docs/          project report (PDF), slides, block diagram, timeline
 - runs the filter bit-accurately, using the same round/shift/saturate rule as the hardware
 - writes the hex vectors the testbench loads
 
-`tb_fir.sv` feeds every sample and compares each `y_out` against the golden output. **All 100 samples matched (100% pass)**, covering both the linear region and the saturated plateau (outputs clamped at 32767).
+`tb_fir.sv` feeds every sample and compares each `y_out` against the golden output. The project report records **all 100 samples matching (100% pass)**, covering both the linear region and the saturated plateau (outputs clamped at 32767).
 
 > `tb_fir.sv` drives the simulation version of `top` (ports `start_bit`/`x_in`/`y_out`). That version is kept as a commented block at the top of `rtl/top.sv`. The active `top` is the FPGA build. To simulate, swap the two blocks.
 
